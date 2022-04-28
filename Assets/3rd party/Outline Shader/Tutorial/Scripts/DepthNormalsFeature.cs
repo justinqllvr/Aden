@@ -34,7 +34,9 @@ public class DepthNormalsFeature : ScriptableRendererFeature
             descriptor.depthBufferBits = 32;
             descriptor.colorFormat = RenderTextureFormat.ARGB32;
 
-            cmd.GetTemporaryRT(destination.id, descriptor, FilterMode.Point);
+            descriptor.msaaSamples = 1;
+
+            cmd.GetTemporaryRT(destination.id, descriptor, FilterMode.Trilinear);
             ConfigureTarget(destination.Identifier());
             ConfigureClear(ClearFlag.All, Color.black);
         }

@@ -47,7 +47,8 @@ public class OutlineFeature : ScriptableRendererFeature
 
             if (destination == RenderTargetHandle.CameraTarget)
             {
-                cmd.GetTemporaryRT(temporaryColorTexture.id, opaqueDescriptor, FilterMode.Point);
+                opaqueDescriptor.msaaSamples = 1;
+                cmd.GetTemporaryRT(temporaryColorTexture.id, opaqueDescriptor, FilterMode.Trilinear);
                 Blit(cmd, source, temporaryColorTexture.Identifier(), outlineMaterial, 0);
                 Blit(cmd, temporaryColorTexture.Identifier(), source);
 
