@@ -8,9 +8,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
+  - enabled: 0
     path: Assets/3rd party/StarterAssets/FirstPersonController/Scenes/Playground.unity
     guid: 707acc8dffb72b144bb1ffbe1c965f3d
+  - enabled: 1
+    path: Assets/Scenes/Levels/Intro/Bureau.unity
+    guid: 55af4069d042d7e43ac3bec6a5be2bb3
   - enabled: 1
     path: Assets/Scenes/Levels/level1/Level1.unity
     guid: e93c42626d3094949a6c8604ef8a3c82
