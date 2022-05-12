@@ -17,6 +17,9 @@ public class DoorDoTween : MonoBehaviour
     [SerializeField]
     private Ease _moveEase = Ease.Linear;
 
+    [SerializeField]
+    private Camera _camera;
+
 
     [SerializeField]
     private DoTweenType _doTweenType = DoTweenType.TriggerDoTween;
@@ -24,14 +27,14 @@ public class DoorDoTween : MonoBehaviour
     private enum DoTweenType
     {
         TriggerDoTween,
-        InterractableDoTween
+        InterractableDoTween,
+        InterractableHistoryDoTween
     }
 
     // Start is called before the first frame update
     void Start()
     {
         _initialPosition = _gameObjectToAnimate.transform.position;
-
         // if (_doTweenType == DoTweenType.MovementOneWay)
         // {
         //     if (_targetLocation == Vector3.zero)
@@ -43,6 +46,17 @@ public class DoorDoTween : MonoBehaviour
 
     private void Update()
     {
+        
+        if(_camera != null && _doTweenType == DoTweenType.InterractableHistoryDoTween && Input.GetKeyDown("f"))
+        {
+            _targetLocation = Vector3.Scale(Camera.main.transform.forward, new Vector3(0.5f,0.5f,0.5f)) + Camera.main.transform.position;
+            Debug.Log(_targetLocation);
+            if (_targetLocation == Vector3.zero)
+                _targetLocation = transform.position;
+            transform.DOMove(_targetLocation, _moveDuration).SetEase(_moveEase);
+            //transform.DOLookAt(Vector3.Scale(Camera.main.transform.forward, _gameObjectToAnimate.transform.forward * 5), _moveDuration);
+        }
+
         if(_doTweenType == DoTweenType.InterractableDoTween && Input.GetKeyDown("f"))
         {
             if (_targetLocation == Vector3.zero)

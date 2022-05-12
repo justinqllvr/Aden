@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 8900000, guid: 619e305f5165a9946b7f72464e44ca4a, type: 3}
   m_Sun: {fileID: 2114283754330233425}
-  m_IndirectSpecularColor: {r: 0.029152099, g: 0.064445436, b: 0.1269502, a: 1}
+  m_IndirectSpecularColor: {r: 0.029152213, g: 0.064445764, b: 0.12695098, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -445,8 +445,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1
-    height: 1
+    width: 2
+    height: 2
 --- !u!222 &217341113
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -602,7 +602,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 247203336}
   m_LocalRotation: {x: 0.52327543, y: -0.34203398, z: 0.7269423, w: 0.28416625}
-  m_LocalPosition: {x: 6.6619654, y: 3.65, z: 3.29}
+  m_LocalPosition: {x: 6.6619654, y: 1.82, z: 3.29}
   m_LocalScale: {x: 48.55697, y: 36.18158, z: 47.740402}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -641,7 +641,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.75194746, b: 0.33927804, a: 1}
-  m_Intensity: 10
+  m_Intensity: 5
   m_Range: 5
   m_SpotAngle: 45
   m_InnerSpotAngle: 21.80208
@@ -962,7 +962,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 830, y: 600}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -1157,8 +1157,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor: {r: 1, g: 0.4653861, b: 0.3820755, a: 1}
-  outlineWidth: 4
+  outlineColor: {r: 0.34509805, g: 1, b: 0.60784316, a: 1}
+  outlineWidth: 8
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
@@ -2042,6 +2042,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 1.201
       objectReference: {fileID: 0}
+    - target: {fileID: 4874080479540134557, guid: 2b286e885e7ddc249a2adbbd70d11488,
+        type: 3}
+      propertyPath: m_TagString
+      value: interractable
+      objectReference: {fileID: 0}
     - target: {fileID: 5010988141926117029, guid: 2b286e885e7ddc249a2adbbd70d11488,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -2882,7 +2887,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -310, y: 156}
+  m_AnchoredPosition: {x: -310, y: 180.2}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1140538963
@@ -3683,6 +3688,24 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 3455940567783186594, guid: 2b286e885e7ddc249a2adbbd70d11488, type: 3}
+--- !u!114 &1608292342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608292333}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0.34509805, g: 1, b: 0.60784316, a: 1}
+  outlineWidth: 4
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &1613174275 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8455728280606582528, guid: 2b286e885e7ddc249a2adbbd70d11488,
