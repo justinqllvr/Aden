@@ -9,6 +9,7 @@ public class DialogueManager : MonoBehaviour
 {   
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TextMeshProUGUI dialogueText;
+    //[SerializeField] private GameObject[] choicesButton;
 
     [Header("Choices UI")]
     [SerializeField] private GameObject[] choices;

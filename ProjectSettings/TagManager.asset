@@ -6,6 +6,7 @@ TagManager:
   tags:
   - CinemachineTarget
   - interractable
+  - interractableHistory
   layers:
   - Default
   - TransparentFX
