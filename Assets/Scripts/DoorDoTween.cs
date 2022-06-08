@@ -8,6 +8,9 @@ public class DoorDoTween : MonoBehaviour
     private Vector3 _targetLocation = Vector3.zero;
 
     [SerializeField]
+    private Vector3 _initialTargetRotation = Vector3.zero;
+
+    [SerializeField]
     private GameObject _gameObjectToAnimate;
 
     [SerializeField]
@@ -36,8 +39,10 @@ public class DoorDoTween : MonoBehaviour
     private bool isAnimated = false;
     private Vector3 _initialPosition;
     private Vector3 _initialRotation;
-    private Vector3 _initialRotationTest;
+    private Vector3 _targetRotation;
     private RaycastHit _hit;
+
+    public static bool canOpenDoor = false;
 
     private enum DoTweenType
     {
@@ -50,10 +55,7 @@ public class DoorDoTween : MonoBehaviour
     void Start()
     {
         _initialPosition = _gameObjectToAnimate.transform.position;
-        _initialRotation = _gameObjectToAnimate.transform.forward;
-        _initialRotationTest = _gameObjectToAnimate.transform.rotation.eulerAngles;
-        //Debug.Log(_initialRotationTest.eulerAngles);
-
+        _initialRotation = _gameObjectToAnimate.transform.rotation.eulerAngles;
     }
 
     private void Update()
@@ -65,18 +67,27 @@ public class DoorDoTween : MonoBehaviour
             {
                 isAnimated = true;
                 _targetLocation = Vector3.Scale(Camera.main.transform.forward, new Vector3(0.5f, 0.5f, 0.5f)) + Camera.main.transform.position;
-                
+                Debug.Log(_hit.collider.gameObject.name);
                 GameState.setIsPlaying(false);
                 transform.DOMove(_targetLocation, _moveDuration).SetEase(_moveEase);
-                transform.DOLookAt(new Vector3(1 - Camera.main.transform.forward.x * 180, 1 - Camera.main.transform.forward.y * 180, 1 - Camera.main.transform.forward.z * 180), _moveDuration).OnComplete(() => { _interractionText.gameObject.SetActive(true); });
+                transform.DOLookAt(new Vector3(1 - Camera.main.transform.forward.x * 180, 1 - Camera.main.transform.forward.y * 180, 1 - Camera.main.transform.forward.z * 180), _moveDuration).OnStart(() => { _interractionText.gameObject.SetActive(true); });
+                if(_initialTargetRotation != Vector3.zero)
+                {
+                    transform.DORotate(_initialTargetRotation, _moveDuration).SetEase(_moveEase);
+                }
+                if(_hit.collider.gameObject.name == "doc_appart_2")
+                {
+                    canOpenDoor = true;
+                    GameObject.Find("bouton_porte").GetComponent<Outline>().OutlineColor = new Color(0, 1f, 0,1); ;
+                }
+                
             }
         } else if (_camera != null && _doTweenType == DoTweenType.InterractableHistoryDoTween && Input.GetKeyDown("f") && isAnimated == true)
         {
             transform.DOMove(_initialPosition, _moveDuration).SetEase(_moveEase);
             _interractionText.gameObject.SetActive(false);
-            Debug.Log(new Vector3(_initialRotation.x * 90, _initialRotation.y * 90, _initialRotation.z * 90));
             transform.DOLookAt(new Vector3( _initialRotation.x, _initialRotation.y, _initialRotation.z), _moveDuration);
-            transform.DORotate(_initialRotationTest, _moveDuration);
+            transform.DORotate(_initialRotation, _moveDuration);
             GameState.setIsPlaying(true);
             isAnimated = false;
         }
@@ -88,7 +99,13 @@ public class DoorDoTween : MonoBehaviour
             {
                 if (_targetLocation == Vector3.zero)
                     _targetLocation = transform.position;
-                StartCoroutine(MoveWithBothWays());
+                if(getCanOpenDoor())
+                {
+                    StartCoroutine(MoveWithBothWays());
+                } else
+                {
+                    Debug.Log("PEUX PAS OUVRIR LA PORTE PRENDS LE DOC");
+                }
             }
                 
         }
@@ -126,4 +143,8 @@ public class DoorDoTween : MonoBehaviour
         _gameObjectToAnimate.transform.DOMove(_initialPosition, _moveDuration).SetEase(_moveEase);
     }
 
+    public static bool getCanOpenDoor()
+    {
+        return canOpenDoor;
+    }
 }
