@@ -67,7 +67,6 @@ public class DoorDoTween : MonoBehaviour
             {
                 isAnimated = true;
                 _targetLocation = Vector3.Scale(Camera.main.transform.forward, new Vector3(0.5f, 0.5f, 0.5f)) + Camera.main.transform.position;
-                Debug.Log(_hit.collider.gameObject.name);
                 GameState.setIsPlaying(false);
                 transform.DOMove(_targetLocation, _moveDuration).SetEase(_moveEase);
                 transform.DOLookAt(new Vector3(1 - Camera.main.transform.forward.x * 180, 1 - Camera.main.transform.forward.y * 180, 1 - Camera.main.transform.forward.z * 180), _moveDuration).OnStart(() => { _interractionText.gameObject.SetActive(true); });
@@ -127,13 +126,13 @@ public class DoorDoTween : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
 
-        if (_doTweenType == DoTweenType.TriggerDoTween)
-        {
-            if (other.tag == "Player")
-            {
-                _gameObjectToAnimate.transform.DOMove(_initialPosition, _moveDuration).SetEase(_moveEase);
-            }
-        }
+        //if (_doTweenType == DoTweenType.TriggerDoTween)
+        //{
+        //    if (other.tag == "Player")
+        //    {
+        //        _gameObjectToAnimate.transform.DOMove(_initialPosition, _moveDuration).SetEase(_moveEase);
+        //    }
+        //}
     }
 
     private IEnumerator MoveWithBothWays()

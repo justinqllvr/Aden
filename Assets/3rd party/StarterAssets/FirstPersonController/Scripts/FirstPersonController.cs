@@ -16,7 +16,7 @@ namespace StarterAssets
 
 		[Header("Player")]
 		[Tooltip("Move speed of the character in m/s")]
-		public float MoveSpeed = 4.0f;
+		public static float MoveSpeed = 4.0f;
 		[Tooltip("Sprint speed of the character in m/s")]
 		public float SprintSpeed = 6.0f;
 		[Tooltip("Rotation speed of the character")]
@@ -77,6 +77,10 @@ namespace StarterAssets
 
 		private const float _threshold = 0.01f;
 
+		public static void setValue (float value)
+        {
+			MoveSpeed = value;
+		}
 		private bool IsCurrentDeviceMouse
 		{
 			get

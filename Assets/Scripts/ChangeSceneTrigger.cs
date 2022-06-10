@@ -21,7 +21,6 @@ public class ChangeSceneTrigger : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
        
-            SceneManager.LoadScene("Level1");
-        Debug.Log("yo");
+            SceneManager.LoadScene("Couloir");
     }
 }
