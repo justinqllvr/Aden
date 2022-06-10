@@ -33656,6 +33656,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   phoneUI: {fileID: 1360903516}
+  delay: 5
 --- !u!1 &2025036000 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7576049415040024864, guid: 1a66bf6cc0587b147baaacbf67e335f0,
