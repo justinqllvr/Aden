@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Fade : MonoBehaviour
 {
-    private float Transparence;
+    private static float Transparence;
     public static bool FadeOut = false;
     public static bool FadeIn = false;
     public float Step;
@@ -12,7 +12,7 @@ public class Fade : MonoBehaviour
     
     void Start()
     {
-        Transparence = 1;
+        Transparence = 0;
     }
 
     // Update is called once per frame
@@ -34,6 +34,12 @@ public class Fade : MonoBehaviour
 
     public static void setFadeIn(bool state)
     {
+        Transparence = 1;
         FadeIn = state;
+    }
+
+    public static void setFadeOut(bool state)
+    {
+        FadeOut = state;
     }
 }

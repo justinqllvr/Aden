@@ -76,12 +76,12 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - Vector1_48F29B53: 0.69
+    - Vector1_48F29B53: 2.31
     - Vector1_4E87E868: 3.05
     - Vector1_541E821D: 1
     - Vector1_6AAE875: 1
-    - Vector1_BC878080: 1.85
-    - Vector1_E4DC2276: 0.343
+    - Vector1_BC878080: 0.3
+    - Vector1_E4DC2276: 0.04
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1

@@ -9,6 +9,7 @@ public class OutlineFeature : ScriptableRendererFeature
         private RenderTargetIdentifier source { get; set; }
         private RenderTargetHandle destination { get; set; }
         public Material outlineMaterial = null;
+       
         RenderTargetHandle temporaryColorTexture;
 
         public void Setup(RenderTargetIdentifier source, RenderTargetHandle destination)
@@ -81,7 +82,7 @@ public class OutlineFeature : ScriptableRendererFeature
     public override void Create()
     {
         outlinePass = new OutlinePass(settings.outlineMaterial);
-        outlinePass.renderPassEvent = RenderPassEvent.AfterRenderingTransparents;
+        outlinePass.renderPassEvent = RenderPassEvent.BeforeRenderingTransparents;
         outlineTexture.Init("_OutlineTexture");
     }
 
