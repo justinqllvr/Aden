@@ -29,9 +29,6 @@ public class DoorDoTween : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI _interractionText;
 
-    [SerializeField]
-    private GameObject pressF = null;
-
     [SerializeField] [TextArea]
     private string _interractionTextText;
 
@@ -40,15 +37,12 @@ public class DoorDoTween : MonoBehaviour
     private DoTweenType _doTweenType = DoTweenType.TriggerDoTween;
 
     private bool isAnimated = false;
-    private bool isInterractable = false;
     private Vector3 _initialPosition;
     private Vector3 _initialRotation;
     private Vector3 _targetRotation;
     private RaycastHit _hit;
 
-
     public static bool canOpenDoor = false;
-
 
     private enum DoTweenType
     {
@@ -60,27 +54,12 @@ public class DoorDoTween : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
         _initialPosition = _gameObjectToAnimate.transform.position;
         _initialRotation = _gameObjectToAnimate.transform.rotation.eulerAngles;
     }
 
     private void Update()
     {
-        if(_camera != null && Physics.Raycast(Camera.main.transform.position, Camera.main.transform.TransformDirection(Vector3.forward), out _hit, Mathf.Infinity))
-        {
-            if(_hit.transform.gameObject.tag == "interractableHistory" || _hit.transform.gameObject.tag == "interractable")
-            {
-                pressF.SetActive(true);
-            }
-            else
-            {
-                if (GameObject.Find("pressF"))
-                {
-                    pressF.SetActive(false);
-                }
-            }
-        }
         //OBJECT INTERRACTABLE HISTOIRE
         if (_camera != null && _doTweenType == DoTweenType.InterractableHistoryDoTween && Input.GetKeyDown("f") && isAnimated == false && Physics.Raycast(Camera.main.transform.position, Camera.main.transform.TransformDirection(Vector3.forward), out _hit, Mathf.Infinity))
         {
@@ -98,7 +77,7 @@ public class DoorDoTween : MonoBehaviour
                 if(_hit.collider.gameObject.name == "doc_appart_2")
                 {
                     canOpenDoor = true;
-                    GameObject.Find("bouton_porte").GetComponent<Outline>().OutlineColor = new Color(0, 1f, 0,1);
+                    GameObject.Find("bouton_porte").GetComponent<Outline>().OutlineColor = new Color(0, 1f, 0,1); ;
                 }
                 
             }
