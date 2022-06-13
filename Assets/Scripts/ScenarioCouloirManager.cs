@@ -69,6 +69,7 @@ public class ScenarioCouloirManager : MonoBehaviour
         accouphene.Stop();
         yield return new WaitForSeconds(3);
         SceneManager.LoadScene("Level1");
+        StarterAssets.FirstPersonController.setValue(4);
     }
 
     private void OnTriggerEnter(Collider other)
