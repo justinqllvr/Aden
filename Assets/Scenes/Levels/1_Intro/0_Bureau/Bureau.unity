@@ -1895,6 +1895,7 @@ MonoBehaviour:
   _moveEase: 3
   _camera: {fileID: 0}
   _interractionText: {fileID: 0}
+  pressF: {fileID: 0}
   _interractionTextText: 
   _doTweenType: 0
 --- !u!65 &710330174
@@ -3394,6 +3395,7 @@ MonoBehaviour:
   _moveEase: 4
   _camera: {fileID: 0}
   _interractionText: {fileID: 0}
+  pressF: {fileID: 1868816352}
   _interractionTextText: 
   _doTweenType: 1
 --- !u!64 &1154443457
@@ -4696,6 +4698,7 @@ MonoBehaviour:
   _moveEase: 4
   _camera: {fileID: 0}
   _interractionText: {fileID: 0}
+  pressF: {fileID: 0}
   _interractionTextText: 
   _doTweenType: 1
 --- !u!64 &1608292338
@@ -4798,6 +4801,7 @@ MonoBehaviour:
   _moveEase: 2
   _camera: {fileID: 110841992}
   _interractionText: {fileID: 2055091728}
+  pressF: {fileID: 1868816352}
   _interractionTextText: 
   _doTweenType: 2
 --- !u!64 &1639040085
@@ -4881,6 +4885,7 @@ MonoBehaviour:
   _moveEase: 1
   _camera: {fileID: 110841992}
   _interractionText: {fileID: 2055091728}
+  pressF: {fileID: 1868816352}
   _interractionTextText: jofsdljkmfsdljk
   _doTweenType: 2
 --- !u!64 &1691341687
@@ -5506,7 +5511,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1868816353
 RectTransform:
   m_ObjectHideFlags: 0

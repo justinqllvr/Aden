@@ -1,0 +1,210 @@
+fileFormatVersion: 2
+guid: c2e6b7eecbdc1b4458676ce4a106d0d7
+ModelImporter:
+  serializedVersion: 21202
+  internalIDToNameTable:
+  - first:
+      74: 4105035181309237176
+    second: Escalier|Cube.001Action
+  - first:
+      74: 6348430925079769326
+    second: Escalier|Cube.129Action
+  - first:
+      74: -7503093503356489160
+    second: Escalier|Cube.132Action
+  - first:
+      74: 919040636666897518
+    second: Escalier|Cube.133Action
+  - first:
+      74: -8400690863076936796
+    second: Escalier|Cylinder.124Action
+  - first:
+      74: 8719013394491110748
+    second: Escalier|Cylinder.191Action
+  - first:
+      74: -4433744776912356999
+    second: Escalier|Cylinder.192Action
+  - first:
+      74: -8515560403302317629
+    second: Cube.001|Cube.001Action
+  - first:
+      74: 9119657842600889553
+    second: Cube.001|Cube.129Action
+  - first:
+      74: 7532182693956344545
+    second: Cube.001|Cube.132Action
+  - first:
+      74: -701520088527112186
+    second: Cube.001|Cube.133Action
+  - first:
+      74: 3184212446531405699
+    second: Cube.001|Cylinder.124Action
+  - first:
+      74: -882785727586277064
+    second: Cube.001|Cylinder.191Action
+  - first:
+      74: -1734010046330578617
+    second: Cube.001|Cylinder.192Action
+  - first:
+      74: -600712446424489584
+    second: Escalier.001|Cube.001Action
+  - first:
+      74: 7372711276112891607
+    second: Escalier.001|Cube.129Action
+  - first:
+      74: -6370284574396891810
+    second: Escalier.001|Cube.132Action
+  - first:
+      74: -8536626565831653062
+    second: Escalier.001|Cube.133Action
+  - first:
+      74: -6184183702084589925
+    second: Escalier.001|Cylinder.124Action
+  - first:
+      74: -4178246606206109490
+    second: Escalier.001|Cylinder.191Action
+  - first:
+      74: -2720813729558172129
+    second: Escalier.001|Cylinder.192Action
+  - first:
+      74: 6339086424154058812
+    second: Escalier.002|Cube.001Action
+  - first:
+      74: -5311733397479651703
+    second: Escalier.002|Cube.129Action
+  - first:
+      74: -1343596667701215526
+    second: Escalier.002|Cube.132Action
+  - first:
+      74: 6413126625262144058
+    second: Escalier.002|Cube.133Action
+  - first:
+      74: 3207198614827186268
+    second: Escalier.002|Cylinder.124Action
+  - first:
+      74: -6933779631206959889
+    second: Escalier.002|Cylinder.191Action
+  - first:
+      74: -6110017601505044842
+    second: Escalier.002|Cylinder.192Action
+  - first:
+      74: 4571147250082644463
+    second: Cylinder.124|Cube.001Action
+  - first:
+      74: -5827160925743543538
+    second: Cylinder.124|Cube.129Action
+  - first:
+      74: -3283377371898687398
+    second: Cylinder.124|Cube.132Action
+  - first:
+      74: 2772958263076138156
+    second: Cylinder.124|Cube.133Action
+  - first:
+      74: -3279745946513501761
+    second: Cylinder.124|Cylinder.124Action
+  - first:
+      74: 5797217511399221433
+    second: Cylinder.124|Cylinder.191Action
+  - first:
+      74: 9205797800223217779
+    second: Cylinder.124|Cylinder.192Action
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 1
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
