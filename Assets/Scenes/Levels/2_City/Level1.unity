@@ -7855,8 +7855,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -7.700001, y: 0.29999924}
-  m_SizeDelta: {x: -42.8745, y: -60.8717}
+  m_AnchoredPosition: {x: -7.700001, y: 6.4942}
+  m_SizeDelta: {x: -42.8745, y: -73.2601}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &460424379
 MonoBehaviour:
@@ -34223,6 +34223,7 @@ GameObject:
   - component: {fileID: 2021730213}
   - component: {fileID: 2021730216}
   - component: {fileID: 2021730217}
+  - component: {fileID: 2021730218}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -34355,6 +34356,19 @@ MonoBehaviour:
   phoneUI: {fileID: 1360903516}
   queteTitle: {fileID: 614259898}
   quete: {fileID: 156759735}
+--- !u!114 &2021730218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2021730210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf1fa5399947b4e33b4d64fac9d2eaf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  phoneUI: {fileID: 1360903516}
 --- !u!1 &2025036000 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7576049415040024864, guid: 1a66bf6cc0587b147baaacbf67e335f0,
